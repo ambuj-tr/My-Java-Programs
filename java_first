@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Main {
+
+    // Static nested class
+    static class Student {
+        String name;
+        int rollNo;
+
+        // Constructor to initialize name and roll number
+        Student(String name, int rollNo) {
+            this.name = name;
+            this.rollNo = rollNo;
+        }
+
+        // Method to display student details
+        void display() {
+            System.out.println("Name: " + name);
+            System.out.println("Roll Number: " + rollNo);
+        }
+    }
+
+    public static void main(String[] args) {
+        // Create a scanner object to read input
+        Scanner scanner = new Scanner(System.in);
+
+        // Input for student's name and roll number
+        System.out.print("Enter student's name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter student's roll number: ");
+        int rollNo = scanner.nextInt();
+
+        // Create an object of the static class Student using constructor
+        Student student = new Student(name, rollNo);
+
+        // Display the student details
+        student.display();
+
+        // Close the scanner
+        scanner.close();
+    }
+}
